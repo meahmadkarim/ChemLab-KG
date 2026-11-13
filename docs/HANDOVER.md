@@ -1,13 +1,15 @@
 # ChemLab KG — Developer & Operations Handover Guide
 
-This document provides a fast-start onboarding guide (under 30 minutes) and operational reference for engineers and maintainers taking over **ChemLab KG**.
+See [PHASE_STATUS.md](./PHASE_STATUS.md) for verified scope and remaining work, and [RELEASE.md](./RELEASE.md) for the current deployment.
+
+This document provides a fast-start onboarding guide and operational reference for engineers and maintainers taking over **ChemLab KG**.
 
 ---
 
 ## 1. Quickstart (< 30 Minutes)
 
 ### Prerequisites
-- **Node.js** 20+ and **npm**
+- **Node.js** 24+ and **npm**
 - A dedicated **Supabase** project (never share a database with another app)
 - Optional: A Google **Gemini API** key (`GEMINI_API_KEY`) for live AI tutor responses
 

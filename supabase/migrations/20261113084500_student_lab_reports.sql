@@ -24,7 +24,7 @@ create table if not exists public.student_lab_reports (
 );
 
 -- Unique index so each student has one active report per experiment (and optional assignment)
-create unique index if not exists lab_reports_user_exp_assignment_idx 
+create unique index if not exists lab_reports_user_exp_assignment_idx
   on public.student_lab_reports(user_id, experiment_slug, coalesce(assignment_id, '00000000-0000-0000-0000-000000000000'::uuid));
 
 create index if not exists lab_reports_user_idx on public.student_lab_reports(user_id, updated_at desc);

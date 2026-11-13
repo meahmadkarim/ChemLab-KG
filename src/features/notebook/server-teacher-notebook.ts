@@ -85,7 +85,7 @@ export async function getTeacherNotebook(
 
   const key = makeNotebookKey(teacher.id, experimentSlug);
   let notebook: TeacherLabNotebook | null = null;
-  
+
 
   // 2. Local store fallback
   if (!notebook) {
@@ -99,7 +99,7 @@ export async function getTeacherNotebook(
     (s) => s.teacherId === teacher.id && s.experimentSlug === experimentSlug
   );
 
-  
+
 
   return { notebook, shares };
 }
@@ -118,7 +118,7 @@ export async function getAllTeacherNotebooks(
   const all = await readAllTeacherNotebooks();
   const notebooks = Object.values(all).filter((n) => n.teacherId === teacher.id);
 
-  
+
 
   const allShares = await readAllShares();
   const result = notebooks.map((nb) => {
@@ -168,7 +168,7 @@ export async function saveTeacherNotebook(
     createdAt: existing?.createdAt || now,
     updatedAt: now,
   };
-  
+
 
   // 2. Local persistent write
   await enqueue(async () => {
@@ -248,7 +248,7 @@ export async function shareNotebookWithClassrooms(
     allShares[shareKey] = shareRecord;
     createdOrUpdatedShares.push(shareRecord);
 
-    
+
   }
 
   // Update notebook status to "published"
@@ -301,7 +301,7 @@ export async function revokeClassroomShare(
     await writeAllShares(allShares);
   });
 
-  
+
 
   return true;
 }
@@ -343,7 +343,7 @@ export async function revokeAllClassroomShares(
     await writeAllTeacherNotebooks(allNb);
   });
 
-  
+
 
   return true;
 }
@@ -387,7 +387,7 @@ export async function deleteTeacherNotebook(
     }
   });
 
-  
+
 
   return true;
 }
@@ -409,7 +409,7 @@ export async function getStudentAccessibleTeacherNotes(
   if (classroomId) {
     shares = shares.filter((s) => s.classroomId === classroomId);
   }
-  
+
 
   return shares;
 }

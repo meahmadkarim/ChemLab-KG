@@ -45,7 +45,7 @@ export async function getStudentLabReport(
 ): Promise<StudentLabReport | null> {
   if (!user.isDemo) return database.readReport(user, experimentSlug, assignmentId);
   const key = makeReportKey(user.id, experimentSlug, assignmentId);
-  
+
 
   // 2. Persistent local store fallback
   const all = await readAllLocal();
@@ -59,7 +59,7 @@ export async function getStudentAllReports(
   const all = await readAllLocal();
   const reports = Object.values(all).filter((r) => r.userId === user.id);
 
-  
+
 
   return reports.sort(
     (a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
@@ -103,7 +103,7 @@ export async function saveStudentLabReport(
     createdAt: existing?.createdAt || now,
     updatedAt: now,
   };
-  
+
 
   // 2. Persistent local store write
   await enqueue(async () => {
@@ -159,7 +159,7 @@ export async function getTeacherClassroomReports(
   if (assignmentId) {
     reports = reports.filter((r) => r.assignmentId === assignmentId);
   }
-  
+
 
   return reports;
 }
@@ -195,7 +195,7 @@ export async function addTeacherReportReview(
     await writeAllLocal(all);
   });
 
-  
+
 
   return report;
 }
@@ -224,7 +224,7 @@ export async function deleteStudentLabReport(
       await writeAllLocal(all);
     }
   });
-  
+
 
   return true;
 }
@@ -259,7 +259,7 @@ export async function withdrawStudentLabReport(
     all[key] = updated;
     await writeAllLocal(all);
   });
-  
+
 
   return updated;
 }

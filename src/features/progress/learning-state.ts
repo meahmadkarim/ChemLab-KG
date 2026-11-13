@@ -197,4 +197,3 @@ export const COLD_START_LEARNER_STATE: StudentLearningState = {
   quizAttempts: [],
   classrooms: [],
 };
-

@@ -2,6 +2,8 @@
 
 A chemistry learning platform for Kyrgyzstan, built with Next.js, TypeScript, Tailwind CSS, shadcn/ui and Supabase PostgreSQL. Public experiment exploration connects to student progress, teacher classrooms, laboratory notebooks and a secured administration workspace.
 
+**[Open ChemLab KG — Live Website](https://chemlab-kg.vercel.app/en)** · [Кыргызча](https://chemlab-kg.vercel.app/ky) · [Русский](https://chemlab-kg.vercel.app/ru)
+
 ## Features
 
 - 24 demonstration experiments, searchable by chemistry topic and safety level, with English, Kyrgyz and Russian content.
@@ -10,7 +12,7 @@ A chemistry learning platform for Kyrgyzstan, built with Next.js, TypeScript, Ta
 - Student bookmarks, classroom enrollment and assignments; teacher classroom management, code rotation, rosters and progress summaries.
 - Student lab reports and teacher notebooks with selected-section sharing, review controls and database ownership policies.
 - Administrator lesson, translation and quiz editing, draft publication, concurrent-edit protection and verified-account role management.
-- Contextual chemistry tutor with an optional Gemini provider and explicitly labelled reference responses when no provider is configured; transparent content-based recommendations.
+- **ChemLab AI — Chemistry AI Bot:** conversational chemistry questions and follow-ups, simple or detailed explanations, examples, experiment support and multilingual answers powered by Gemini. Reference mode is explicitly labelled if the live provider is unavailable. Transparent content-based recommendations help learners choose what to explore next.
 - Supabase email authentication, password recovery, private avatars and isolated demonstration sessions.
 
 ## Local setup
@@ -32,7 +34,7 @@ npm run build
 npm start
 ```
 
-Open http://localhost:3000/en (also `/ky` and `/ru`). Login offers clearly labelled demo accounts. Real teacher access requires administrator approval; real admin access cannot be obtained through a demo account.
+Try the deployed platform at [chemlab-kg.vercel.app/en](https://chemlab-kg.vercel.app/en) (also [Кыргызча](https://chemlab-kg.vercel.app/ky) and [Русский](https://chemlab-kg.vercel.app/ru)). Login offers clearly labelled demo accounts. Real teacher access requires administrator approval; real admin access cannot be obtained through a demo account.
 
 ## Verification
 

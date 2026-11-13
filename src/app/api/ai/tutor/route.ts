@@ -8,6 +8,8 @@ import {
   type TutorStyle,
 } from "@/features/ai/service";
 
+export const maxDuration = 40;
+
 export async function POST(request: NextRequest) {
   try {
     const clientIp =

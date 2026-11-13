@@ -55,7 +55,7 @@ const UI_COPY: Record<
 > = {
   en: {
     title: "Ask ChemLab AI",
-    subtitle: "Ask any question about this experiment, reaction, or video moment.",
+    subtitle: "Your chemistry AI bot — ask questions, explore concepts, and discuss experiments.",
     clearMoment: "Clear timestamp",
     styleLabel: "Explanation style:",
     styles: {
@@ -64,7 +64,7 @@ const UI_COPY: Record<
       example: "With an Example",
     },
     suggestedLabel: "Quick questions:",
-    placeholder: "Ask a question about this reaction...",
+    placeholder: "Ask ChemLab AI a chemistry question...",
     sendBtn: "Ask",
     clearChat: "Clear chat",
     thinking: "Thinking about your question...",
@@ -202,6 +202,7 @@ export function ChemLabTutorPanel({
       const res = await fetch("/api/ai/tutor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        signal: AbortSignal.timeout(35000),
         body: JSON.stringify({
           experimentSlug: experiment.slug,
           question: trimmed,
@@ -459,6 +460,7 @@ export function ChemLabTutorPanel({
                     </button>
                   )}
 
+                {msg.role === "assistant" && <p className="text-[11px] font-semibold text-[#536574]">{msg.providerMode === "gemini_live" ? "ChemLab AI · Live AI" : "ChemLab AI · Reference mode (live AI unavailable)"}</p>}
                 <p className="whitespace-pre-line">{msg.text}</p>
 
                 {msg.role === "assistant" && msg.safetyNotice && (
@@ -529,6 +531,7 @@ export function ChemLabTutorPanel({
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            aria-label="Ask ChemLab AI"
             placeholder={copy.placeholder}
             maxLength={400}
             className="flex-1 rounded-full border border-[#142D40]/15 bg-[#F8F7F4] px-4 py-2.5 text-sm text-[#142D40] placeholder:text-[#536574]/70 focus:outline-none focus:border-[#087F8C] focus:bg-white"

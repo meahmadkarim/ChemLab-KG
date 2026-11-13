@@ -1,0 +1,3 @@
+export default function InformationPage() {
+ return <article className="container-page py-16 max-w-3xl"><h1 className="text-3xl font-bold mb-6">Accessibility</h1><p className="leading-8 text-slate-600">The platform supports keyboard navigation, labelled quiz controls, responsive layouts, and Kyrgyz, Russian, and English interface text. Use browser zoom and the video player’s caption controls where captions are available. Demonstration stage notes are approximate and await review. Some new administration and account messages are currently English. Full screen-reader, contrast, and cross-browser certification is pending.</p></article>;
+}

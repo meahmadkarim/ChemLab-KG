@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "ChemLab KG — Learn Chemistry Through Real Experiments",
+    "description": "Watch real laboratory chemistry experiments, explore visual explanations, and test your understanding with interactive questions."
+  },
+  "banner": {
+    "demoLabel": "Portfolio Project",
+    "demoText": "Independent portfolio demonstration for chemistry education in Kyrgyzstan. Sample translations & demo videos are marked for expert review."
+  },
+  "nav": {
+    "experiments": "Experiments",
+    "interactiveCheck": "Try a Problem",
+    "teachers": "For Teachers",
+    "safety": "Lab Safety",
+    "about": "About",
+    "myLearning": "My Progress",
+    "signIn": "Sign in",
+    "exploreCta": "Explore Experiments",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "languageLabel": "Language"
+  },
+  "hero": {
+    "eyebrow": "Interactive Chemistry Lab Library · Kyrgyzstan",
+    "tagline": "Learn Chemistry Through Real Experiments",
+    "title": "See reactions happen. Understand why they work.",
+    "subtitle": "Watch real laboratory experiments, step through visual chemical explanations, and test your intuition right away — free and open to every student and teacher, even when school lab equipment is limited.",
+    "primaryCta": "Explore 24 Experiments",
+    "secondaryCta": "Try Interactive Question",
+    "teacherLink": "Teaching a class? Assign experiments →",
+    "pills": {
+      "curated": "24 Curated Lab Videos",
+      "noLogin": "No Account Needed to Watch",
+      "interactive": "Instant Quiz Feedback",
+      "bilingual": "Kyrgyz · Russian · English"
+    },
+    "cardCaption": "Interactive Lab Preview · Acid–Base Indicator Shift",
+    "cardHint": "Drag or tap a pH stage below to observe how anthocyanin indicator molecules shift color."
+  },
+  "interactivePreview": {
+    "eyebrow": "Learn by Doing · Inspired by Active Problem Solving",
+    "title": "Don't just memorize equations — test your chemical intuition",
+    "subtitle": "Every experiment on ChemLab KG pairs real laboratory footage with interactive concept checks that give you immediate, visual feedback.",
+    "questionLabel": "Quick Concept Check · Gas Tests",
+    "questionPrompt": "During the electrolysis of water (2H₂O → 2H₂ + O₂), two gases collect in inverted test tubes above the electrodes. Which observation confirms that the gas in the cathode tube is hydrogen (H₂) and why does it have twice the volume?",
+    "options": [
+      {
+        "id": "a",
+        "label": "It relights a glowing splint, and hydrogen atoms are larger than oxygen atoms.",
+        "isCorrect": false,
+        "feedback": "Not quite! Relighting a glowing splint is the classic test for oxygen (O₂), not hydrogen. Also, gas volume at the same temperature and pressure depends on the number of molecules (Avogadro's law), not atomic size."
+      },
+      {
+        "id": "b",
+        "label": "It burns with acharacteristic 'pop' sound near a flame, and each water molecule (H₂O) contains 2 hydrogen atoms per 1 oxygen atom.",
+        "isCorrect": true,
+        "feedback": "Spot on! Hydrogen reacts rapidly with oxygen in air (2H₂ + O₂ → 2H₂O) producing a sharp 'pop'. Because H₂O has a 2:1 ratio of H to O, stoichiometry produces 2 moles of H₂ gas for every 1 mole of O₂."
+      },
+      {
+        "id": "c",
+        "label": "It turns limewater milky, and hydrogen dissolves less in water than oxygen.",
+        "isCorrect": false,
+        "feedback": "Turning limewater (Ca(OH)₂) milky is the test for carbon dioxide (CO₂), which forms insoluble calcium carbonate (CaCO₃)."
+      }
+    ],
+    "checkBtn": "Check Answer",
+    "tryAgainBtn": "Try Another Option",
+    "correctBadge": "Correct! +1 Concept Mastered",
+    "tryHint": "Select an answer above to see instant feedback",
+    "openFullExperiment": "Watch Full Water Electrolysis Experiment"
+  },
+  "featured": {
+    "eyebrow": "Curated Experiment Gallery",
+    "title": "Featured Laboratory Experiments",
+    "subtitle": "A focused collection of 24 essential chemistry experiments — organized by scientific topic, never locked behind accounts or rigid schedules.",
+    "viewAll": "Browse All 24 Experiments",
+    "watchBtn": "Watch & Practice",
+    "demoBadge": "Demo Video",
+    "questionsCount": "{n} questions",
+    "durationUnit": "min"
+  },
+  "howItWorks": {
+    "eyebrow": "How ChemLab KG Works",
+    "title": "Three steps from observation to deep understanding",
+    "subtitle": "Designed for mobile phones, classroom projectors, and self-paced study across Kyrgyzstan.",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Watch the Real Experiment",
+        "description": "Observe clear, close-up laboratory recordings with synchronized step timestamps, safety callouts, and subtitles."
+      },
+      {
+        "step": "02",
+        "title": "See the Molecular Story",
+        "description": "Read concise, visual explanations of what is happening at the particle level — with balanced equations and equipment breakdowns."
+      },
+      {
+        "step": "03",
+        "title": "Check Understanding Immediately",
+        "description": "Answer interactive multiple-choice questions right after watching, with clear explanations for every single choice."
+      }
+    ]
+  },
+  "topicsSection": {
+    "eyebrow": "Explore by Chemistry Concept",
+    "title": "Browse by Scientific Topic",
+    "subtitle": "Our library is organized around core chemical phenomena so learners and teachers can jump straight to the reaction they need.",
+    "experimentsUnit": "{n} experiments"
+  },
+  "rolesSection": {
+    "eyebrow": "Built for Learners & Educators",
+    "title": "Open for everyone. Powerful for classrooms.",
+    "student": {
+      "badge": "For Students & Self-Learners",
+      "title": "Learn at your own pace, with or without an account",
+      "points": [
+        "Watch every experiment video and read full explanations with zero login barriers.",
+        "Practice interactive concept checks and see step-by-step explanations.",
+        "Create a free optional student account to save bookmarks, track mastered experiments, and join your teacher's class."
+      ],
+      "cta": "Open Student Dashboard Preview"
+    },
+    "teacher": {
+      "badge": "For Chemistry Teachers",
+      "title": "Bring laboratory demonstrations into any classroom",
+      "points": [
+        "Project high-clarity experiments in class when reagents or fume hoods aren't available.",
+        "Create private virtual classrooms in seconds with a simple 6-character join code.",
+        "Assign experiments and quizzes with optional due dates and monitor student understanding at a glance."
+      ],
+      "cta": "Explore Teacher Classroom Tools"
+    }
+  },
+  "safetyBanner": {
+    "title": "Observation First: Laboratory Safety Matters",
+    "description": "Many chemistry demonstrations involve heat, corrosive reagents, or reactive metals. Videos on ChemLab KG are designed for safe visual observation — laboratory procedures must only be performed in properly equipped school labs under qualified teacher supervision.",
+    "cta": "Read Lab Safety Guide"
+  },
+  "library": {
+    "title": "Chemistry Experiment Library",
+    "subtitle": "Explore our curated collection of 24 practical chemistry experiments. Filter by chemical topic, safety mode, or search by keyword.",
+    "searchPlaceholder": "Search by experiment name, reagent, formula (e.g. H2O2,铜/Cu, pH, electrolysis)...",
+    "allTopics": "All Topics",
+    "allSafety": "All Safety Levels",
+    "sortLabel": "Sort by",
+    "sortRecommended": "Recommended",
+    "sortShortest": "Shortest duration",
+    "sortAZ": "Title (A–Z)",
+    "showingCount": "Showing {shown} of {total} experiments",
+    "clearFilters": "Reset filters",
+    "emptyTitle": "No experiments match your search",
+    "emptySubtitle": "Try clearing a topic filter or searching for a broader term like 'gas', 'indicator', or 'metal'.",
+    "safetyLevels": {
+      "observe": "Observe Only (High Hazard)",
+      "teacher_demo": "Teacher Demonstration",
+      "student_lab": "Supervised Student Lab"
+    }
+  },
+  "experimentDetail": {
+    "backToLibrary": "← Back to Experiment Library",
+    "demoNoticeTitle": "Portfolio Demo Footage & Content Notice",
+    "demoNoticeText": "This entry uses a curated educational YouTube laboratory demonstration for portfolio preview. Final UCA laboratory recordings and expert-verified Kyrgyz/Russian scientific translations will be managed via the Admin CMS.",
+    "tabs": {
+      "procedure": "1. Procedure",
+      "science": "2. Science Behind It",
+      "safety": "3. Materials & Safety",
+      "quiz": "4. Try the Quiz",
+      "tutor": "5. Ask ChemLab AI"
+    },
+    "videoSection": {
+      "jumpToStep": "Jump to timestamp",
+      "youtubeCaptionHint": "Subtitles/CC and fullscreen available in player controls",
+      "watchOnYoutube": "Open on YouTube",
+      "activeStepLabel": "Current stage"
+    },
+    "objectivesTitle": "What You Will Learn",
+    "procedureTitle": "Observed Procedure & Key Moments",
+    "procedureHint": "Click any timestamp to jump the video directly to that stage of the reaction.",
+    "equationTitle": "Balanced Chemical Equation",
+    "explanationTitle": "Why Does This Reaction Happen?",
+    "visualDiagramTitle": "Visual Reaction Breakdown",
+    "materialsTitle": "Equipment & Reagents",
+    "safetyTitle": "Laboratory Safety Precautions",
+    "resourcesTitle": "Downloadable Classroom Handouts",
+    "downloadPdf": "Teacher & Student Worksheet (PDF Summary)",
+    "assignBtn": "Assign to Classroom",
+    "bookmarkBtn": "Save Experiment",
+    "bookmarkedBtn": "Saved to My List",
+    "quiz": {
+      "eyebrow": "Interactive Knowledge Check",
+      "title": "Test Your Understanding",
+      "subtitle": "Answer {total} questions about what you just observed. You'll get immediate feedback and a detailed explanation after each question.",
+      "questionProgress": "Question {current} of {total}",
+      "checkAnswer": "Check Answer",
+      "nextQuestion": "Next Question →",
+      "seeResults": "See Final Score →",
+      "retryQuiz": "Practice Again",
+      "correctTitle": "Correct!",
+      "incorrectTitle": "Not quite — here's why:",
+      "scoreTitle": "Experiment Check Complete!",
+      "scoreSubtitle": "You answered {score} out of {total} questions correctly.",
+      "saveProgressPrompt": "Signed-in students save scores automatically to their learning profile and teacher assignments."
+    },
+    "relatedTitle": "Related Experiments in This Topic"
+  },
+  "footer": {
+    "tagline": "Learn Chemistry Through Real Experiments.",
+    "disclaimerTitle": "Independent Portfolio Demonstration Disclaimer",
+    "disclaimerText": "ChemLab KG is an independent software engineering portfolio project created to demonstrate full-stack architecture and educational UX design. It is not an official, commissioned, or endorsed website of the University of Central Asia (UCA), the U.S. Embassy in Bishkek, or the Ministry of Education and Science / Ministry of Enlightenment of the Kyrgyz Republic.",
+    "linksTitle": "Platform",
+    "resourcesTitle": "Demo Roles & Views",
+    "kyrgyzSupport": "Kyrgyz Cyrillic Verified: Ң ң · Ө ө · Ү ү",
+    "freeStack": "Built with Next.js, TypeScript, Tailwind CSS & Supabase Free"
+  }
+}

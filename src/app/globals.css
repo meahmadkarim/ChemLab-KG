@@ -1,0 +1,247 @@
+@import "tailwindcss" source("../");
+@import "tw-animate-css";
+@import "../styles/vendor/shadcn.css";
+
+/*
+ * ChemLab KG — Brilliant.org Full-Width Visual Learning + Harvard Hero Design System
+ *
+ * Primary Design Tokens:
+ *   Warm white:      #F8F7F4
+ *   White:           #FFFFFF
+ *   Deep navy:       #142D40
+ *   Secondary text:  #536574
+ *   Teal:            #087F8C
+ *   Soft peach:      #F7DED0
+ *   Soft lavender:   #EAE3F5
+ *   Soft sage:       #DCE9DF
+ *   Soft blue:       #DCECF6
+ *   Cool blue-gray:  #E8EFF4
+ *   Warm amber:      #F2B544
+ *   Muted coral:     #E89A87
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-navy-deep: var(--navy-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-surface: var(--surface);
+  --color-surface-warm: var(--surface-warm);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-strong: var(--primary-strong);
+  --color-teal: var(--teal);
+  --color-teal-soft: var(--teal-soft);
+  --color-teal-strong: var(--teal-strong);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-amber-ink: var(--amber-ink);
+  --color-peach: var(--peach);
+  --color-lavender: var(--lavender);
+  --color-sage: var(--sage);
+  --color-soft-blue: var(--soft-blue);
+  --color-blue-gray: var(--blue-gray);
+  --color-coral: var(--coral);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+
+  /* Typography — Noto Sans with full Kyrgyz (ң/Ң, ө/Ө, ү/Ү), Russian, and English support */
+  --font-sans: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-brand: var(--font-brand), var(--font-manrope), sans-serif;
+
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.25);
+  --radius-2xl: calc(var(--radius) * 1.5);
+  --radius-3xl: calc(var(--radius) * 2);
+}
+
+:root {
+  --radius: 1rem;
+
+  --navy-deep: #142D40;
+
+  /* Warm Alabaster Canvas & Pure White Surfaces */
+  --background: #F8F7F4;
+  --surface: #F8F7F4;
+  --surface-warm: #F1EFEA;
+  --card: #FFFFFF;
+
+  /* Strict Neutral Typography Colors */
+  --ink: #142D40;
+  --foreground: #142D40;
+  --card-foreground: #142D40;
+  --popover: #FFFFFF;
+  --popover-foreground: #142D40;
+
+  --ink-soft: #536574;
+  --ink-muted: #536574;
+
+  /* Primary Interactive Action (#087F8C Teal) */
+  --primary: #087F8C;
+  --primary-strong: #066670;
+  --primary-soft: #DCECF6;
+  --primary-foreground: #FFFFFF;
+
+  --teal: #087F8C;
+  --teal-strong: #066670;
+  --teal-soft: #DCE9DF;
+
+  /* Soft Full-Width Section Tokens — Strict Three-Color Palette: White, Warm White, Light Blue */
+  --soft-blue: #E6F2F5;
+
+  --secondary: #F1EFEA;
+  --secondary-foreground: #142D40;
+  --muted: #F1EFEA;
+  --muted-foreground: #536574;
+  --accent: #E6F2F5;
+  --accent-foreground: #142D40;
+
+  --success: #087F8C;
+  --success-soft: #E6F2F5;
+  --danger: #D9534F;
+  --danger-soft: #F1EFEA;
+  --destructive: #D9534F;
+
+  --border: #E8E6E1;
+  --input: #DDDAD2;
+  --ring: #087F8C;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-x: clip;
+  }
+  h1 {
+    @apply font-display text-[#142D40] font-extrabold tracking-tight;
+    font-size: clamp(1.75rem, 2.75vw, 2.35rem);
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+  h2 {
+    @apply font-display text-[#142D40] font-bold tracking-tight;
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+  h3 {
+    @apply font-display text-[#142D40] font-semibold tracking-tight;
+    font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+  h4 {
+    @apply font-display text-[#142D40] font-semibold tracking-tight;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+}
+
+@layer utilities {
+  /* Inner Content Container for Full-Bleed Sections */
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Brilliant-Inspired Fluid Typography Scale — Balanced & Normal Proportions */
+  .heading-hero {
+    font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+  }
+
+  .heading-section {
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  .heading-sub {
+    font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+
+  .body-lead {
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    line-height: 1.55;
+  }
+
+  /* Tactile Cards & Buttons */
+  .card-tactile {
+    @apply bg-white rounded-3xl border border-[#142D40]/10;
+  }
+
+  .card-tactile-interactive {
+    @apply bg-white rounded-3xl border border-[#142D40]/10 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md;
+  }
+
+  .btn-tactile-primary {
+    @apply bg-[#087F8C] text-white font-semibold rounded-full transition-colors duration-150 hover:bg-[#142D40];
+  }
+
+  .btn-tactile-teal {
+    @apply bg-[#087F8C] text-white font-semibold rounded-full transition-colors duration-150 hover:bg-[#142D40];
+  }
+
+  .btn-tactile-amber {
+    @apply bg-[#F2B544] text-[#142D40] font-semibold rounded-full transition-colors duration-150 hover:bg-[#e5a835];
+  }
+
+  .btn-cinema-glass {
+    @apply bg-white/15 text-white font-semibold rounded-full border border-white/35 backdrop-blur-md transition-colors duration-150 hover:bg-white/25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

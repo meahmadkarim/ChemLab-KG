@@ -1,0 +1,3 @@
+export default function InformationPage() {
+ return <article className="container-page py-16 max-w-3xl"><h1 className="text-3xl font-bold mb-6">Demonstration terms</h1><p className="leading-8 text-slate-600">ChemLab KG is an independent educational software portfolio project, with no government, embassy, or university endorsement. Experiment materials, translations, and AI responses are demonstrations awaiting subject-expert review. Use videos for observation; practical chemistry requires qualified supervision and an approved risk assessment. AI answers may be inaccurate. Do not submit sensitive or identifying information through the tutor. External video providers retain their own content rights and service terms.</p></article>;
+}

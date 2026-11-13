@@ -1,0 +1,26 @@
+name: Quality checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - name: Build with configured catalog
+        if: ${{ vars.NEXT_PUBLIC_SUPABASE_URL != '' && vars.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY != '' }}
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
+          AUTH_SESSION_SECRET: ${{ secrets.AUTH_SESSION_SECRET }}
+        run: npm run build

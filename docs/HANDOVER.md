@@ -27,7 +27,7 @@ This document provides a fast-start onboarding guide and operational reference f
    - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` — Your Supabase publishable (`anon`) key
    - `AUTH_SESSION_SECRET` — Random secret string, at least 32 characters (used for isolated demo/signed sessions; keep different per environment)
    - `GEMINI_API_KEY` *(optional, server-only)* — Live AI tutor key; when omitted, the tutor automatically uses clearly labeled reference responses
-   - `GEMINI_MODEL` *(optional)* — Defaults to `gemini-2.5-flash`
+   - `GEMINI_MODEL` *(optional)* — Defaults to `gemini-3.5-flash-lite`
 
 3. **Provision a fresh Supabase database:**
    - Apply SQL files in `supabase/migrations/` in filename order.
@@ -86,7 +86,7 @@ This document provides a fast-start onboarding guide and operational reference f
 - **Database & Auth (Supabase):** Runs cleanly within the Supabase Free or Pro tier using standard PostgreSQL + RLS + Supabase Auth. No service-role admin workers or paid Supabase Edge Functions are required.
 - **AI Tutor (Google Gemini):**
   - Authenticated live AI tutor usage is rate-limited to **50 requests per UTC day** per user to keep API costs predictable.
-  - Anonymous/demo users, missing `GEMINI_API_KEY`, or quota-exhausted states gracefully fall back to **reference mode** (deterministic, zero-cost curriculum replies clearly marked as reference output).
+  - Missing provider configuration, unavailable models or an exhausted account allowance cause the bot to fall back to **reference mode** (deterministic, zero-cost curriculum replies clearly marked as reference output).
 
 ---
 

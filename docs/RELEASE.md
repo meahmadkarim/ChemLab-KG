@@ -18,3 +18,7 @@
 - GitHub Actions also passed for `4af7e68`.
 - This release used the authenticated Vercel CLI. Automatic deployments on Git pushes have not been configured.
 - The next documentation-only commit records this outcome and does not change deployed application behavior.
+
+## ChemLab AI production update
+
+The production site now serves application commit `984d079` from deployment `dpl_HessMByc9mPKToChkTvUobmSWaaS`. All six staged desktop and mobile browser cases passed, including live Gemini conversations. The repository is public and its README links directly to the deployed chat.

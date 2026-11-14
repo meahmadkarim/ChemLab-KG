@@ -14,10 +14,10 @@ Compared with `PROJECT_SPEC.md` section 10 and `IMPLEMENTATION_PLAN.md` section 
 
 ## AI/ML additions
 
-- Contextual tutor, three explanation styles, source/provider labels, timestamp context and deterministic reference fallback are implemented. Production has a Gemini key variable configured, but a configured variable is not proof of a successful live provider call. No paid/live provider test was performed during this release review.
+- ChemLab AI is a Gemini-powered chemistry bot with three explanation styles, conversation history and optional experiment timestamps. Desktop and mobile browser tests on Vercel each verified two live Gemini answers, including a follow-up.
 - Intelligent quiz hints/explanations use the private database catalog and server-enforced assignment permissions. AI does not determine grades.
 - Personalized recommendations use transparent content-based ranking and the published catalog. They are not a trained machine-learning model. Latest distinct question evidence avoids inflating mastery through repeated attempts.
-- Authenticated live tutor requests have a shared database daily allowance; anonymous/demo use stays in reference mode.
+- Authenticated live tutor requests have a shared database daily allowance; public and demo chat also use an IP-based request limiter in the running instance.
 
 ## Verified evidence for this review
 

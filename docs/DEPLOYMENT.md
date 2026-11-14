@@ -35,11 +35,11 @@ GitHub Actions runs code checks. The build step runs when repository variables `
 - Archive classrooms to close new enrollment; rotate join codes after unwanted disclosure.
 - Publish only reviewed content. Optimistic save checks prevent overwriting an administrator's newer catalog edit.
 - Teacher note sharing copies selected sections into a snapshot; edit and republish to update student-visible notes.
-- Tutor calls use reference mode for anonymous/demo users, missing provider configuration, or exhausted daily allowance. Authenticated live use is limited to 50 requests per UTC day. Reference replies are not live AI output.
+- Tutor calls use reference mode when the provider is unavailable or the signed-in user exhausts the daily allowance. Authenticated live use is limited to 50 requests per UTC day. Reference replies are not live AI output.
 - Local `.data`, `.env.local`, caches, test traces and avatars are excluded from Git. Do not upload them manually.
 - The dependency override for `@typescript-eslint/typescript-estree` selects patched `minimatch` 11.0.8. Lint must be checked when updating that toolchain; remove the override once upstream adopts a safe version.
 - The build disables Turbopack's filesystem cache to avoid stale loader artifacts seen in the Windows/OneDrive workspace. `.next-release` is dedicated generated output; do not place source files there.
 
 ## Current external dependencies
 
-Production now has a Gemini key variable configured; successful live replies still require a separate provider acceptance test. Real experiment footage, precise transcripts and expert-reviewed translations must be supplied or approved by the content owner. The database security advisor reports leaked-password protection disabled; no paid plan or account setting was changed. Verify that setting in Supabase before operating with real learners.
+Live Gemini conversations passed the desktop and mobile browser acceptance tests on Vercel. Real experiment footage, precise transcripts and expert-reviewed translations must be supplied or approved by the content owner. The database security advisor reports leaked-password protection disabled; no paid plan or account setting was changed. Verify that setting in Supabase before operating with real learners.

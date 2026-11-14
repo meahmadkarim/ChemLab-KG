@@ -4,6 +4,14 @@ A chemistry learning platform for Kyrgyzstan, built with Next.js, TypeScript, Ta
 
 **[Open ChemLab KG — Live Website](https://chemlab-kg.vercel.app/en)** · [Кыргызча](https://chemlab-kg.vercel.app/ky) · [Русский](https://chemlab-kg.vercel.app/ru)
 
+## ChemLab AI
+
+ChemLab AI is a conversational chemistry bot powered by Gemini. A learner can ask “How does an atom become an ion?”, request a simpler explanation, then ask for an example. The bot uses the conversation history to understand the follow-up. During an experiment, the learner can also ask about a selected video timestamp using the accompanying lesson notes.
+
+[Try ChemLab AI in the red cabbage pH experiment](https://chemlab-kg.vercel.app/en/experiments/red-cabbage-ph-indicator?tab=tutor)
+
+The chat labels live Gemini answers and reference responses separately. An opt-in Playwright test submits a question and follow-up through the deployed interface, checks that both answers came from Gemini, and confirms that both appeared on screen at desktop and mobile sizes. [Read the browser test](tests/browser/ai-live.spec.ts).
+
 ## Features
 
 - 24 demonstration experiments, searchable by chemistry topic and safety level, with English, Kyrgyz and Russian content.
@@ -12,7 +20,6 @@ A chemistry learning platform for Kyrgyzstan, built with Next.js, TypeScript, Ta
 - Student bookmarks, classroom enrollment and assignments; teacher classroom management, code rotation, rosters and progress summaries.
 - Student lab reports and teacher notebooks with selected-section sharing, review controls and database ownership policies.
 - Administrator lesson, translation and quiz editing, draft publication, concurrent-edit protection and verified-account role management.
-- **ChemLab AI — Chemistry AI Bot:** conversational chemistry questions and follow-ups, simple or detailed explanations, examples, experiment support and multilingual answers powered by Gemini. Reference mode is explicitly labelled if the live provider is unavailable. Transparent content-based recommendations help learners choose what to explore next.
 - Supabase email authentication, password recovery, private avatars and isolated demonstration sessions.
 
 ## Local setup

@@ -1,3 +1,4 @@
+import { DemoVideoNotice } from "@/components/layout/DemoVideoNotice";
 import { LearningSaveNotice } from "@/components/layout/LearningSaveNotice";
 import type { Metadata } from "next";
 import { Inter, Manrope, Noto_Sans, Plus_Jakarta_Sans } from "next/font/google";
@@ -100,6 +101,7 @@ export default async function LocaleRootLayout({
           {children}
         </PublicLayoutChrome>
         <LearningSaveNotice locale={locale} />
+        <DemoVideoNotice copy={dict.demoVideoNotice} />
       </body>
     </html>
   );

@@ -1,4 +1,10 @@
 {
+  "demoVideoNotice": {
+    "title": "ChemLab KG demo video",
+    "message": "I mistakenly included the wrong video link in my internship application. Please use the link below to watch the ChemLab KG Student and Teacher Demo.",
+    "watch": "Watch demo video",
+    "close": "Close"
+  },
   "meta": {
     "title": "ChemLab KG — Learn Chemistry Through Real Experiments",
     "description": "Watch real laboratory chemistry experiments, explore visual explanations, and test your understanding with interactive questions."

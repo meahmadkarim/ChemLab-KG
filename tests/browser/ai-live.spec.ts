@@ -4,6 +4,7 @@ test("ChemLab AI answers a chemistry question and a follow-up using live Gemini"
   test.skip(process.env.CHECK_LIVE_AI !== "1", "Explicit opt-in: makes live provider requests.");
   test.setTimeout(100000);
   await page.goto("/en/experiments/red-cabbage-ph-indicator?tab=tutor");
+  await page.getByRole("dialog").getByRole("button", { name: "Close", exact: true }).click();
   const input = page.getByRole("textbox", { name: "Ask ChemLab AI", exact: true });
   await expect(input).toBeVisible();
   for (const question of ["What is the difference between an atom and an ion?", "Give one simple example of each from your previous answer."]) {

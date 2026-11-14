@@ -1,6 +1,7 @@
 import type { Locale } from "@/i18n/config";
 
 export const siteConfig = {
+  demoVideoUrl: "https://youtu.be/lJMQ0WhSPXg",
   name: "ChemLab KG",
   shortName: "ChemLab",
   countryBadge: "KG",
